@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#100c0a" />
+  <title>Measure Engine</title>
+  <link rel="manifest" href="./manifest.json" />
+  <link rel="icon" href="./icon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <div class="app">
+    <header class="top"><div>
+      <p class="eyebrow">Cleo Studio · Pillar 01</p>
+      <h1>Measure Engine</h1>
+      <p class="sub">World sliders, shaft Orders, invoices, provisional pairing.</p>
+    </div></header>
+    <nav class="tabs">
+      <button type="button" class="on" data-tab="world">World</button>
+      <button type="button" data-tab="cast">Cast</button>
+      <button type="button" data-tab="rite">Rite</button>
+      <button type="button" data-tab="pair">Pair</button>
+      <button type="button" data-tab="census">Census</button>
+    </nav>
+    <section id="panel-world" class="panel on">
+      <div class="card">
+        <h2>Sliders</h2>
+        <label class="row">Publicity<select id="pub"><option value="secret">secret</option><option value="rumor" selected>rumor</option><option value="majority">measured-at-majority</option><option value="displayed">displayed</option><option value="aura">aura-visible</option></select><span class="val">who knows</span></label>
+        <label class="row">Law<select id="law"><option value="private">private</option><option value="custom" selected>custom</option><option value="licensed">licensed-breeding</option><option value="caste">caste</option></select><span class="val">who may pair</span></label>
+        <label class="row">Layer mix<select id="mix"><option value="flesh-only">flesh-only</option><option value="flesh-primary" selected>flesh-primary</option><option value="marked-common">marked-common</option><option value="mythic-normal">mythic-normal</option></select><span class="val">Mark rate</span></label>
+        <label class="row">Invoice<select id="inv"><option value="cosmetic">cosmetic</option><option value="felt" selected>felt</option><option value="brutal">brutal</option><option value="cosmological">cosmological</option></select><span class="val">cost of size</span></label>
+        <label class="row">Seed<input id="seed" type="text" value="cleo-01" autocomplete="off" /><span class="val">repeatable</span></label>
+        <div class="actions">
+          <button class="act" type="button" id="btn-cast">Roll cast of 8</button>
+          <button class="act ghost" type="button" id="btn-one">Roll one shaft</button>
+          <button class="act ghost" type="button" id="btn-census">Census 100</button>
+        </div>
+      </div>
+      <div class="card"><h2>Canon on this tape</h2><p class="grammar">Flesh ~ Veale 13.12 ± 1.66 cm BPEL. Mark line 18 cm. Pairing is F_L and F_G.</p></div>
+    </section>
+    <section id="panel-cast" class="panel"><div class="actions" style="margin-bottom:10px"><button class="act" type="button" id="btn-cast2">Reroll cast</button><span class="meta" id="cast-count"></span></div><div id="cast-grid" class="grid cast"></div></section>
+    <section id="panel-rite" class="panel"><div id="rite-box"></div></section>
+    <section id="panel-pair" class="panel"><div class="actions" style="margin-bottom:10px"><button class="act ghost" type="button" id="btn-pair-hint">Pick from cast</button></div><div id="pair-box"></div></section>
+    <section id="panel-census" class="panel"><div id="census-box"><div class="card"><p class="invoice">Run a census from World.</p></div></div></section>
+    <p class="foot">Measure Engine v0.1</p>
+  </div>
+  <div class="toast" id="toast"></div>
+  <script src="./canon.js"></script>
+  <script src="./ui.js"></script>
+</body>
+</html>
