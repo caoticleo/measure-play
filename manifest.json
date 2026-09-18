@@ -1,0 +1,9 @@
+{
+  "name": "Measure Engine",
+  "short_name": "Measure",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#100c0a",
+  "theme_color": "#100c0a",
+  "icons": [{"src": "icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable"}]
+}
